@@ -1,0 +1,47 @@
+.LoginModal {
+    .Content {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        & > * {
+            padding: 5px;
+            min-width: 100%;
+            position: relative;
+            top: 0;
+            display: block;
+            transition-duration: 0.3s;
+            transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+            &:last-child {
+                transform: translate(-100%);
+            }
+        }
+        .rightToLeft {
+            transform: translate(-100%);
+            // left: calc(-100% + 60px);
+        }
+        .leftToRight {
+            transform: translate(100%);
+            // right: calc(-100% + 60px);
+        }
+    }
+    .LoginSwitch {
+        p {
+            display: inline-block;
+            margin: 5px;
+            color: rgb(47, 47, 47);
+            cursor: pointer;
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+    .invalid:focus {
+        border-color: #ff8080;
+        box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+    }
+    .invalid {
+        border-color: #ff8080;
+        box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+    }
+}
